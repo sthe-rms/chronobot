@@ -1,0 +1,148 @@
+[gd_scene load_steps=32 format=3 uid="uid://d30gpxjrcu8ok"]
+
+[ext_resource type="Texture2D" uid="uid://kv8au2c5guy6" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0000.png" id="1_qx8mw"]
+[ext_resource type="Script" path="res://levels/keys/key.gd" id="1_yrpue"]
+[ext_resource type="Texture2D" uid="uid://bfdj4f42lu07y" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0001.png" id="2_k2vp1"]
+[ext_resource type="Texture2D" uid="uid://c650xb4451pw8" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0002.png" id="3_cepls"]
+[ext_resource type="Texture2D" uid="uid://c834qb1gd6cbb" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0003.png" id="4_ycqae"]
+[ext_resource type="Texture2D" uid="uid://b6xb7vbu0lvyw" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0004.png" id="5_ccmuf"]
+[ext_resource type="Texture2D" uid="uid://cvfbjliavww22" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0005.png" id="6_4bcb6"]
+[ext_resource type="Texture2D" uid="uid://7k4fhro5qvlx" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0006.png" id="7_wkkot"]
+[ext_resource type="Texture2D" uid="uid://fa4cvemb6k52" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0007.png" id="8_kqddi"]
+[ext_resource type="Texture2D" uid="uid://cnkg5o8uudyor" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0016.png" id="9_5vj0b"]
+[ext_resource type="Texture2D" uid="uid://ctlw33u774bjf" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0008.png" id="10_joko2"]
+[ext_resource type="Texture2D" uid="uid://b2weqhoplgvne" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0009.png" id="11_oyb24"]
+[ext_resource type="Texture2D" uid="uid://qsbrttjs0m3r" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0010.png" id="12_oawfj"]
+[ext_resource type="Texture2D" uid="uid://b7jho3obr7jjf" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0011.png" id="13_x56ld"]
+[ext_resource type="Texture2D" uid="uid://clg5upc2pw8v2" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0012.png" id="14_28y7k"]
+[ext_resource type="Texture2D" uid="uid://b66bn7yytikjv" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0013.png" id="15_nyg3a"]
+[ext_resource type="Texture2D" uid="uid://ly73g0qegxvj" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0014.png" id="16_76et0"]
+[ext_resource type="Texture2D" uid="uid://b2xd61stha8x1" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0015.png" id="17_5fiey"]
+[ext_resource type="Texture2D" uid="uid://bgxif5sfxt55k" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0017.png" id="18_1a712"]
+[ext_resource type="Texture2D" uid="uid://4pmj81hnxhkd" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0018.png" id="19_v5d2q"]
+[ext_resource type="Texture2D" uid="uid://b68u1jc6ff1eo" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0019.png" id="20_4o2rs"]
+[ext_resource type="Texture2D" uid="uid://b0km4hjdwdl2u" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0020.png" id="21_fis8d"]
+[ext_resource type="Texture2D" uid="uid://ctqvtngp4iupf" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0021.png" id="22_8pdfe"]
+[ext_resource type="Texture2D" uid="uid://c0jccydbl7pi8" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0022.png" id="23_ytb3x"]
+[ext_resource type="Texture2D" uid="uid://bqd0mrtiaqosa" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0023.png" id="24_ee7bh"]
+[ext_resource type="Texture2D" uid="uid://cskn8pma0w58a" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0024.png" id="25_0xifu"]
+[ext_resource type="Texture2D" uid="uid://8dvkxborjhmx" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0025.png" id="26_aaxni"]
+[ext_resource type="Texture2D" uid="uid://bt2vtws56viqr" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0026.png" id="27_y7vml"]
+[ext_resource type="Texture2D" uid="uid://cm7iwpl8adjo2" path="res://levels/keys/GOLD/Key 7 - GOLD - frame0027.png" id="28_ruelj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iayxo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qx8mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k2vp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cepls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ycqae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ccmuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4bcb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wkkot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kqddi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5vj0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_joko2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oyb24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oawfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x56ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_28y7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nyg3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_76et0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5fiey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1a712")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v5d2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4o2rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fis8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8pdfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ytb3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ee7bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0xifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_aaxni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_y7vml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ruelj")
+}],
+"loop": true,
+"name": &"animKey",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkb8r"]
+radius = 9.05539
+
+[node name="key" type="Node2D"]
+script = ExtResource("1_yrpue")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 4.71239
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_iayxo")
+animation = &"animKey"
+autoplay = "animKey"
+frame = 21
+frame_progress = 0.223601
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mkb8r")
+debug_color = Color(0.517647, 0.447059, 0.937255, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

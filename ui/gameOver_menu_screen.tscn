@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://crij1c1gj4p0m"]
+
+[ext_resource type="Script" path="res://ui/gameOver_menu_screen.gd" id="1_vnd2m"]
+[ext_resource type="Texture2D" uid="uid://ejnya4wmhdd2" path="res://ui/theme/environment-preview.png" id="2_m0yhs"]
+[ext_resource type="Theme" uid="uid://baugwm03f0fmm" path="res://ui/theme/game_theme.tres" id="3_xslha"]
+[ext_resource type="Texture2D" uid="uid://siih3wstd3rd" path="res://ui/theme/player-run-4.png" id="4_blmf4"]
+[ext_resource type="Texture2D" uid="uid://daky26l3wtoew" path="res://ui/theme/jumper-idle-4.png" id="5_0uqts"]
+[ext_resource type="Texture2D" uid="uid://ckvy3blgxamu3" path="res://ui/theme/octopus-4.png" id="6_hr4j8"]
+[ext_resource type="FontFile" uid="uid://d227bjgid6mlw" path="res://ui/theme/GravityRegular5.ttf" id="7_ytout"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4gyq6"]
+
+[node name="GameOverMenuScreen" type="CanvasLayer"]
+script = ExtResource("1_vnd2m")
+
+[node name="bg" type="TextureRect" parent="."]
+self_modulate = Color(0.0470588, 0.0470588, 0.0470588, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -77.0
+offset_right = 526.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_m0yhs")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_xslha")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY AGAIN
+"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="Player-run-4" type="Sprite2D" parent="."]
+position = Vector2(306, 219)
+scale = Vector2(1.24375, 1.24375)
+texture = ExtResource("4_blmf4")
+flip_h = true
+
+[node name="Jumper-idle-4" type="Sprite2D" parent="."]
+position = Vector2(40, 226)
+texture = ExtResource("5_0uqts")
+
+[node name="Octopus-4" type="Sprite2D" parent="."]
+position = Vector2(221, 38)
+texture = ExtResource("6_hr4j8")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -59.0
+offset_right = 79.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("7_ytout")
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_4gyq6")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

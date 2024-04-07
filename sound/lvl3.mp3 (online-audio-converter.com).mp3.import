@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmufhxxb5eiro"
+path="res://.godot/imported/lvl3.mp3 (online-audio-converter.com).mp3-dcb6faf0a3adf37927dff5bc5db9d314.mp3str"
+
+[deps]
+
+source_file="res://sound/lvl3.mp3 (online-audio-converter.com).mp3"
+dest_files=["res://.godot/imported/lvl3.mp3 (online-audio-converter.com).mp3-dcb6faf0a3adf37927dff5bc5db9d314.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

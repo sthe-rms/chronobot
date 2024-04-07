@@ -1,0 +1,20 @@
+res://levels
+res://player/player_states
+res://player
+res://pickups
+res://enemies/t-rex/idle sequence
+res://enemies
+res://ui/screen_transition
+res://levels/keys
+res://scripts
+res://levels/door
+res://ui
+res://ui/theme
+res://collectibles
+res://collectibles/blue_coin
+res://pickups/health_pickup
+res://player/player_death_effect
+res://ui/health_bar
+res://scripts/state_machine
+res://levels/test_levels
+res://background

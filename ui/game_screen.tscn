@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1h67lv2srdji"]
+
+[ext_resource type="PackedScene" uid="uid://t5ljs2iw83tc" path="res://ui/health_bar.tscn" id="1_fw8uo"]
+[ext_resource type="Script" path="res://ui/game_screen.gd" id="1_himy3"]
+[ext_resource type="Texture2D" uid="uid://bhbfg05qeis4l" path="res://collectibles/coins-chests-etc-2-0 (1).png" id="2_x4ogw"]
+[ext_resource type="Texture2D" uid="uid://cpgg0ho1btdaf" path="res://ui/icons8-pause-roxo.png" id="4_2e71e"]
+[ext_resource type="Texture2D" uid="uid://b21so088ir87o" path="res://ui/icons8-pause-branco.png" id="5_f7n4j"]
+
+[node name="GameScreen" type="CanvasLayer"]
+script = ExtResource("1_himy3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 13.0
+offset_right = -2.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="HealthBar" parent="MarginContainer/VBoxContainer/Control" instance=ExtResource("1_fw8uo")]
+position = Vector2(6, 3)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/Control"]
+position = Vector2(5, 0)
+texture = ExtResource("2_x4ogw")
+centered = false
+hframes = 10
+vframes = 4
+
+[node name="CollectibleLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 14
+text = "0"
+
+[node name="PauseTextureButton" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("5_f7n4j")
+texture_hover = ExtResource("4_2e71e")
+
+[connection signal="pressed" from="MarginContainer/PauseTextureButton" to="." method="_on_pause_texture_button_pressed"]

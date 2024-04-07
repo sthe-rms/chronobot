@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdjmdagg3n1cb"]
+
+[ext_resource type="Script" path="res://enemies/fireball.gd" id="1_p4q6b"]
+[ext_resource type="Texture2D" uid="uid://eon2t3hb33vd" path="res://enemies/Fireball_Projectile (16 x 16).png" id="2_t0iuw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdm68"]
+atlas = ExtResource("2_t0iuw")
+region = Rect2(0, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftrdf"]
+atlas = ExtResource("2_t0iuw")
+region = Rect2(16, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyx6s"]
+atlas = ExtResource("2_t0iuw")
+region = Rect2(32, 0, 16, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2dnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdm68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftrdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyx6s")
+}],
+"loop": true,
+"name": &"ball",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bv4ou"]
+radius = 5.0
+height = 18.0
+
+[node name="fireball" type="CharacterBody2D" groups=["Enemy", "fireball"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_p4q6b")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q2dnb")
+animation = &"ball"
+autoplay = "ball"
+frame_progress = 0.677539
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bv4ou")

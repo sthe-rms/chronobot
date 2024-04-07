@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://wglct6528xyt"]
+
+[ext_resource type="Script" path="res://enemies/knive.gd" id="1_qre7i"]
+[ext_resource type="Texture2D" uid="uid://mx66qypwqbgh" path="res://enemies/arm_projectile_glowing.png" id="1_ve27v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1lne"]
+atlas = ExtResource("1_ve27v")
+region = Rect2(50, 0, 50, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkifa"]
+atlas = ExtResource("1_ve27v")
+region = Rect2(150, 0, 50, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faoom"]
+atlas = ExtResource("1_ve27v")
+region = Rect2(250, 0, 50, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6sy0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1lne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkifa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faoom")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dxyp"]
+radius = 5.0
+height = 26.0
+
+[node name="knive" type="CharacterBody2D" groups=["Enemy", "knive"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_qre7i")
+damage_amount = 2
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, 3)
+scale = Vector2(0.76, 0.76)
+sprite_frames = SubResource("SpriteFrames_m6sy0")
+autoplay = "default"
+frame_progress = 0.790038
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1dxyp")

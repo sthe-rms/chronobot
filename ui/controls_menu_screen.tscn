@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://2uhqtypilgtx"]
+
+[ext_resource type="Script" path="res://ui/controls_menu_screen.gd" id="1_5gdti"]
+[ext_resource type="Texture2D" uid="uid://ejnya4wmhdd2" path="res://ui/theme/environment-preview.png" id="2_8wvom"]
+[ext_resource type="Theme" uid="uid://baugwm03f0fmm" path="res://ui/theme/game_theme.tres" id="3_4no5a"]
+[ext_resource type="Texture2D" uid="uid://siih3wstd3rd" path="res://ui/theme/player-run-4.png" id="4_pfbta"]
+[ext_resource type="FontFile" uid="uid://d227bjgid6mlw" path="res://ui/theme/GravityRegular5.ttf" id="4_qivh6"]
+[ext_resource type="Texture2D" uid="uid://daky26l3wtoew" path="res://ui/theme/jumper-idle-4.png" id="5_swcsn"]
+[ext_resource type="Texture2D" uid="uid://ckvy3blgxamu3" path="res://ui/theme/octopus-4.png" id="6_xagcf"]
+
+[node name="PauseMenuScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_5gdti")
+
+[node name="TextureReact" type="TextureRect" parent="."]
+modulate = Color(0.321569, 0.117647, 0.513726, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -77.0
+offset_right = 526.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8wvom")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_4no5a")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="controls" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_qivh6")
+theme_override_font_sizes/font_size = 10
+text = "CONTROLS
+"
+
+[node name="instruction" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_qivh6")
+theme_override_font_sizes/font_size = 10
+text = "
+A -> ESQUERDA
+
+D -> DIREIRA
+
+SPACE -> PULO
+
+K -> TIRO
+
+W -> FOCA EM CIMA
+
+S -> QUEDA RAPIDA
+
+L -> AGARRA NA PAREDE
+
+X -> AGACHA
+
+"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="Player-run-4" type="Sprite2D" parent="."]
+position = Vector2(368, 230)
+scale = Vector2(1.24375, 1.24375)
+texture = ExtResource("4_pfbta")
+flip_h = true
+
+[node name="Jumper-idle-4" type="Sprite2D" parent="."]
+position = Vector2(42, 230)
+texture = ExtResource("5_swcsn")
+
+[node name="Octopus-4" type="Sprite2D" parent="."]
+position = Vector2(94, 70)
+texture = ExtResource("6_xagcf")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

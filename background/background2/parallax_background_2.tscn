@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ja32qpd4s26"]
+
+[ext_resource type="Texture2D" uid="uid://b5lk47jm6vxww" path="res://background/background2/background.png" id="1_twlfw"]
+[ext_resource type="Texture2D" uid="uid://cwjaflw4afohn" path="res://background/background2/middleground.png" id="2_66q6o"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="BackgroundParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(-16, 32)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundParallaxLayer"]
+position = Vector2(16, -384)
+scale = Vector2(2, 2)
+texture = ExtResource("1_twlfw")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundParallaxLayer"]
+position = Vector2(592, -384)
+scale = Vector2(2, 2)
+texture = ExtResource("1_twlfw")
+centered = false
+
+[node name="MiddlegorundParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(0, -240)
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(1919, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="MiddlegorundParallaxLayer"]
+position = Vector2(0, -112)
+texture = ExtResource("2_66q6o")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="MiddlegorundParallaxLayer"]
+position = Vector2(960, -112)
+texture = ExtResource("2_66q6o")
+centered = false

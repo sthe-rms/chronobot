@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxf5lgvbkgsj0"]
+
+[ext_resource type="Script" path="res://ui/pause_menu_screen.gd" id="1_5tp6r"]
+[ext_resource type="Texture2D" uid="uid://ejnya4wmhdd2" path="res://ui/theme/environment-preview.png" id="1_wqem8"]
+[ext_resource type="Theme" uid="uid://baugwm03f0fmm" path="res://ui/theme/game_theme.tres" id="2_yxgf6"]
+[ext_resource type="Texture2D" uid="uid://siih3wstd3rd" path="res://ui/theme/player-run-4.png" id="3_hcdl0"]
+[ext_resource type="Texture2D" uid="uid://daky26l3wtoew" path="res://ui/theme/jumper-idle-4.png" id="4_4i3u2"]
+[ext_resource type="Texture2D" uid="uid://ckvy3blgxamu3" path="res://ui/theme/octopus-4.png" id="5_tgpwh"]
+
+[node name="PauseMenuScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_5tp6r")
+
+[node name="TextureReact" type="TextureRect" parent="."]
+modulate = Color(0.231373, 0.0666667, 0.345098, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -77.0
+offset_right = 526.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wqem8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_yxgf6")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CONTINUE
+"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="Player-run-4" type="Sprite2D" parent="."]
+position = Vector2(306, 219)
+scale = Vector2(1.24375, 1.24375)
+texture = ExtResource("3_hcdl0")
+flip_h = true
+
+[node name="Jumper-idle-4" type="Sprite2D" parent="."]
+position = Vector2(40, 226)
+texture = ExtResource("4_4i3u2")
+
+[node name="Octopus-4" type="Sprite2D" parent="."]
+position = Vector2(221, 38)
+texture = ExtResource("5_tgpwh")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
